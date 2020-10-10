@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <title>Séptimo mar</title>
+</head>
+
+<body onload="tarjetaStjepan()">
+    <header>
+
+        <!-- <nav>
+            <ul>
+                <li><a href="">Personajes</a></li>
+                <li><a href="" onclick="myMapa()">Mapa</a></li>
+            </ul>
+        </nav> -->
+        <center>
+            <h1>
+                Séptimo mar
+            </h1>
+        </center>
+
+    </header>
+
+    <section>
+        <div class='container' id='cont'>
+
+
+        </div>
+
+
+        <!-- Modal -->
+
+        <div class="modal fade" id="modalStjepan" tabindex="-1" aria-labelledby="modalStjepan" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Historia de Stjepan</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="modal fade" id="modalNekane" tabindex="-1" aria-labelledby="modalNekane" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Historia de Nekane</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script>
+
+        function preguntasNekane() {
+
+            var texto = "";
+
+            texto += "<div class='texto'><h5>1. ¿De qué nación es tu héroe?</h5>"
+
+                + "<p> Castilla.</p>"
+
+                + "<h5> 2. ¿Cómo describirías físicamente a tu héroe?</h5>"
+
+                + "<p>Mujer de piel pálida con pelo negro y ojos verdes, que suele llevar el pelo suelto y dos trenzas en"
+                + " el flequillo que las recoge y ata tras la melena. También suele llevar unas gafas de sol que le"
+                + " compro a un mercader de Vodacce, suele ir vestida con chaleco negro, camisa blanca con mangas anchas"
+                + " y ribeteadas, pantalones negros y botas de monte.</p>"
+
+                + "<h5> 3. ¿Tu héroe tiene gestos recurrentes?</h5>"
+
+                + "<p> Suele a tener un tic nervioso con ajustarse bien las gafas empujándolas con el índice de la mano"
+                + " izquierda por el puente.</p>"
+
+                + " <h5> 4. ¿Cuál es la motivación principal de tu héroe?</h5>"
+
+                + "<p> Convencer al gobierno de Montaigne para que le ayude o integre la aceptación de la hechicería de"
+                + "castilla en Teah.</p>"
+
+
+                + " <h5> 5. ¿Cuál es el mayor punto fuerte de tu héroe? ¿Y la mayor debilidad? ¿Tu héroe es realmente bueno en una cosa en particular?</h5>"
+
+                + "<p>Le gusta demasiado la juerga, la vida y no suele ser demasiado seria, aunque su humor suele ser bastante agridulce a veces.</p>"
+
+                + "<h5> 6. ¿Cuáles son las cosas que más y que menos le gustan a tu héroe?</h5>"
+
+
+                + " <p>Lo que más le gusta es picar de flor en flor y la magia.</p>"
+
+                + "<p> Lo que menos le gusta es la gente seria y amargada y la iglesia.</p>"
+
+                + "<h5>7. ¿Qué pasa con la psicología de tu héroe ?</h5 >"
+
+                + "<p>Le hacen feliz esas pequeñas sorpresas que te da la vida al descubrir a alguien de verdad noble y"
+                + " altruista, porque al margen de su manera de ser extrovertida, es alguien que ve la realidad como es,"
+                + " solo que prefiere tomársela a chiste para sobrevivir.</p>"
+
+                + "<p> Le disgustan las injusticias y rara vez dejará que suceda alguna si puede evitarlo, sin embargo, es"
+                + " consciente de que suceden todos los días y de que no puede salvar al mundo entero, por ello, ayudará"
+                + " solo en las causas que sean viables, no se tirará de cabeza a causas en las que se comprometa su"
+                + " vida o la de sus amigos, incluso tratará de disuadirlos.</p>"
+
+                + "<h5> 8. ¿Cuál es el mayor miedo de tu héroe?</h5>"
+
+                + "La inquisición."
+
+                + " <h5> 9. ¿Cuál es la mayor ambición de tu héroe?¿Su mayor pasión?</h5>"
+
+                + "<p>Llegar a conseguir un lugar en el mundo más allá del pastoreo y la práctica de la magia en los Montes del Hierro para sus compañeros magos y ella. Su mayor pasión, son las personas y los animales.</p>"
+
+                + "<h5> 10. ¿Qué piensa tu héroe sobre su país?</h5>"
+
+                + " <p>No acaba de comprender porque la tecnología tiene que estar reñida con la hechicería.</p>"
+
+                + "<h5> 11. ¿Tu héroe tiene algún prejuicio?</h5>"
+
+                + " <p> No.</p>"
+
+                + " <h5>12. ¿Dónde residen las lealtades de tu héroe?</h5>"
+
+                + "<p> La lealtad está con sus compañeros de la Montañas del Hierro.</p>"
+
+                + "<h5> 13. ¿Tu héroe está enamorado? ¿Está casado o comprometido?</h5>"
+
+                + "<p> No. A su difunto novio lo despeñaron por un barranco por hechicero.</p>"
+
+                + " <h5>14. ¿Qué pasa con la familia de tu héroe?</h5>"
+
+                + "<p>Su familia es pobre, anteriormente fue noble, pero eso acabo con la purga de la magia de Castilla."
+
+                + "</p>"
+
+                + "<h5>15. ¿Cómo lo describirían sus padres?</h5>"
+
+                + "<p>La alegría de la huerta.</p>"
+
+                + "<p> Padre: Hija, eres como una ladilla, picas pero da gusto rascarse, sin embargo, llegarás lejos"
+
+                + " porque eres una muy buena estudiante</p>"
+
+                + " <p>Madre: Cariño, tienes grandes cualidades, cuídate de la iglesia e intentar vivir, la riqueza a"
+
+                + " veces no reside en el dinero</p>"
+
+                + " <p>Tiene un tío que reside en Montaigne.</p>"
+
+                + "<h5> 16. ¿Tu héroe es un gentil?</h5>"
+
+                + " <p> A veces, solo cuando intenta camelarse a alguien o se enamora de verdad.</p>"
+
+                + "<h5> 17. ¿Tu héroe es muy religioso? ¿Qué secta de la Iglesia sigue?</h5>"
+
+                + "<p> Es atea.</p>"
+
+                + "<h5> 18. ¿Tu héroe es miembro de un gremio, un club de caballeros o una sociedad secreta?</h5>"
+
+                + "<p>No.</p>"
+
+                + "<h5> 19. ¿Qué piensa tu héroe de la hechicería?</h5>"
+
+                + "<p> Le encanta. </p>"
+
+                + "<h5> 20. Si pudieras, ¿Qué consejo le darías a tu héroe?</h5>"
+
+                + "<p> Cuidado con las bromas, el límite entre lo gracioso y lo hiriente es muy fino.</p>"
+
+                + "<a href='#' class='btn btn-white bg-dark text-white' onclick='tarjetaStjepan()'>Volver</a></div>";
+
+            document.getElementById("cont").innerHTML = texto;
+
+
+
+
+        }
+
+
+        function preguntasStjepan() {
+
+            var texto = "";
+
+            texto += "<div class='texto'><h5>1. ¿De qué nación es tu héroe?</h5>"
+
+                + "<p> Stjepan nació en la ciudad portuaria de Memel, en el Ducado de Curonia, de la Mancomunidad Sármata.</p>"
+
+                + "<h5> 2. ¿Cómo describirías físicamente a tu héroe?</h5>"
+
+                + "<p>Se trata de un mestizo curonio-lunar. Piel blanca pero con facilidad para broncearse, incluso en entornos nublados y oscuros, como su tierra natal. Pelo negro y con tendencia a ondularse, largo, pero con un vello facial y corporal que crecen demasiado lento para los estándares curonios, pero muy rápido para los lunares. Ojos de un azul profundo, muy sármatas, y labios carnosos. Nariz aguileña, constitución robusta, pero no tan corpulento como sus congéneres. Musculatura algo definida, dado el entrenamiento Losejai, pero no muy desarrollada, ya que no le dedica la suficiente atención. Mirada nerviosa, rostro muy variable y cargado de expresividad, por más que le fastidie. 1,65m de altura, dentro de la media, pero que suele tener que ponerse de puntillas en las grandes congregaciones de sármatas, y sentarse muy delante en el Sejm para que no le tapen la vista.</p>"
+
+                + "<h5> 3. ¿Tu héroe tiene gestos recurrentes?</h5>"
+
+                + "<p> A causa de su especial relación con su deivas, tiende a estar constantemente mirando alrededor, y de reojo a todas las cosas, buscándole con la mirada, lo que puede poner nerviosos a sus interlocutores. También, a causa de lo que pueda decirle, o hacer, su humor puede cambiar aparentemente sin motivo a ira, contención, hastío... O a nada en absoluto. A causa de la gran humedad de su ciudad natal, en cualquier tierra de interior estará constantemente humedeciéndose los labios resecos, o frotándose los ojos, incómodo por la sequedad; sin embargo, esto también le hace sudar bastante menos que la media. Físicamente, suele estirar la espalda, flexionar los hombros, y mover el cuello, sobretodo cuando está mucho tiempo sentado o de pie, a causa de viejas heridas y contusiones que, durante su infancia y posterior entrenamiento, no llegaron a curarse del todo.</p>"
+
+                + " <h5> 4. ¿Cuál es la motivación principal de tu héroe?</h5>"
+
+                + "<p>La mayor motivación de Stjepan es redimir su error, subsanarlo, y devolver sus consecuencias multiplicadas por mil al mundo en beneficios. No se considerará capaz de perdonarse antes. Si se encontrase a las puertas de la muerte, se aferraría a la vida con todas sus fuerzas solo por no osar mirar a su mentor a los ojos en la otra vida sin haber conseguido resarcirle. No se rendirá, ni se dejará ir, hasta que lo consiga.</p>"
+
+                + " <h5> 5. ¿Cuál es el mayor punto fuerte de tu héroe? ¿Y la mayor debilidad? ¿Tu héroe es realmente bueno en una cosa en particular?</h5>"
+
+                + "<p>A Stjepan le gusta pensar que es bueno en lo tocante a la sutileza, y que tiene una voluntad con la que es difícil enrredar. Tiene una mente que es tan fácil de afilar como de que pierda el filo, por lo que necesita constantemente algo en lo que enfocar su atención para poder aprender de ello y mejorar. No es increíblemente apto físicamente, ni se le da bien persuadir a la gente para que entienda y haga lo que desea, pero también se precia de saber buscar métodos alternativos para conseguir sus objetivos, si merecen la pena tal esfuerzo.</p>"
+
+                + "<h5> 6. ¿Cuáles son las cosas que más y que menos le gustan a tu héroe?</h5>"
+
+
+                + " <p>Stjepan adora el buen comer, sea éste el que sea, y cocinar le proporciona grandes momentos de paz espiritual y relajación física y mental. Es buen tolerante a la bebida, pero solo unos pocos sabores le captan el paladar. Considera que no hay modo mejor de ir a la cama, o de sentirte a gusto bajo un techo, que escuchar cómo la lluvia cae y el viento aúlla al exterior. Se siente más cómodo en entornos rurales y salvajes, rodeado por la naturaleza caótica, e incluso peligrosa, pero nunca malintencionada, que en entornos urbanos, rodeado de gente a la que es muy probable que nunca llegue a conocer, pero de quienes tiende a pensar que ya están planeando maldades contra él, o cualquier otro. Le encanta conocer a gente idealista, y siente la necesidad de protegerles de cualquier daño que pueda llegar a su modo de pensar, ya que sabe que él perdió su oportunidad de llegar a serlo. Apenas puede tragar que se realicen injusticias en su presencia, y a pesar de todo lo vivido, no consigue evitar que un cadáver asesinado le revuelva las tripas.</p>"
+
+                + "<h5>7. ¿Qué pasa con la psicología de tu héroe ?</h5 >"
+
+                + "<p>Stjepan, gracias al duro entrenamiento vivido en el Ratas, está modulando su mente para trabajar en base a la sinceridad y las certezas. Blinda su mente contra las mentiras, afina su ingenio para poder expresar lo que desea, y conseguir sus objetivos, sin necesidad de mentir, y trabaja su astucia para poder comunicarse con si Dievas sin temor a que tuerza sus palabras formando un arma con la que destruirle. Del mismo modo, tiende a ser muy empírico, analítico, buscando las certezas y descartando lo imposible, manteniendo lo improbable retenido en la frontera de su mente. Aunque no le guste admitirlo, adora las historias felices. No puede evitar sonreír cuando ve a niños jugando felices, parejas mostrando su afecto, o escucha una risa sincera, sana. Trata de no enfadarse, más que nada por no darle ese placer a Lombrai, pero tiene tendencia a tolerar mal ciertas ofensas, y en ocasiones debe detenerse y buscar un momento para desahogar la ira y la pena, en caso de que algo se la haya despertado. Lo que más le fastidia, y le insta a mejorar esa faceta de sí, es que Lombrai siempre, siempre le observa mientras lo hace, sonriendo inexcrutable, y bebiéndose su alma por los ojos (metafóricamente). No es dado a la coquetería, pero sabe ver indirectas. No le gusta nada no saber lo que está pasando en una situación determinada, lo que le hace detestar tanto las reuniones cortesanas como los bosques encantados, pero atravesará unos y otros en caso de que sea necesario. -Según qué fin justifica según qué medios- es su regla con la que medir las situaciones. No es muy dado al arte, pero sabe apreciar, sin método alguno, alguna pintura, música o escultura que le capte los ojos; es, sin embargo, perfectamente capaz de quedar en ridículo ante cualquier entendido de cualquier cosa intelectual o artística, salvo la cocina y la botánica. Aún así, se esfuerza en aprender cuando hay ocasión, pero no sin un motivo previo.</p>"
+
+                + "<p> Le disgustan las injusticias y rara vez dejará que suceda alguna si puede evitarlo, sin embargo, es"
+
+                + "consciente de que suceden todos los días y de que no puede salvar al mundo entero, por ello, ayudará"
+
+                + "solo en las causas que sean viables, no se tirará de cabeza a causas en las que se comprometa su"
+
+                + "vida o la de sus amigos, incluso tratará de disuadirlos.</p>"
+
+                + "<h5> 8. ¿Cuál es el mayor miedo de tu héroe?</h5>"
+
+                + "Stjepan le teme, con toda su alma, a que Lombrai consiga lo que quiere, y le consiga llevar por el camino que tiene planeado para él. No sabe cuál es, ni siquiera si lo está recorriendo ya, pero el mero pensamiento al respecto le provoca sudores fríos, y debe forzarse a desviar su carruaje de pensamiento. En cuanto a temas más terrenales, no es capaz de estar cerca de un perro, sea cual sea su tamaño (por supuesto, a más grande, peor), desde aquella vez que, siendo niño, intentó entrar por la ventana de una casa para robar algo de la despensa, y un perro guardián se lanzó a su cuello, dejándole varias cicatrices. Sin embargo, no teme a la oscuridad en ningún grado, ya que, en cierto modo... No deja de ser su amante problemática."
+
+                + " <p> 9. ¿Cuál es la mayor ambición de tu héroe ?¿Su mayor pasión ?</p >"
+
+                + "<p> No tiene intención de ser recordado, por nadie. Lo que hace lo hace en nombre de quienes ha perdido, para que, en el fin de los días, sepan que el esfuerzo que invirtieron en él no fue en vano. Pero si hay algo que le gustaría ver junto a su nombre en un libro de historia, sería: -Fue un Losejas firme, nunca permitió que su voluntad zozobrase ante la tentación-. O quizás... -Consiguió que Théah fuese un lugar mejor, por esto o por aquello-. Pero no es un hombre de ambiciones concretas.</p>"
+
+                + "<h5> 10. ¿Qué piensa tu héroe sobre su país?</h5>"
+
+                + " <p>Stjepan no es precisamente el ejemplo perfecto de patriotismo, pero también sabe que no le habría gustado nacer en ningún otro lugar. Sabe que es quien es gracias a su tierra, su cultura, historia, y modo de vida, y no se arrepiente de nada de ello. Ante ciudadanos de otras naciones no alardeará, ni tratará de encontrar defectos o fallos en su cultura o gobierno, salvo si corregirlos reportaría un beneficio notable. Sin embargo, se defenderá de los ataques contra su tierra, y tratará de dejarla siempre en buen lugar, pues sabe que la opinión de una persona puede ser rápidamente la de cientos, y Sarmacia no puede permitirse odio, ni enemigos. Sin embargo, sí que está muy orgulloso de la Libertad Dorada, y acude a votar al Sejm cada vez que tiene la posibilidad.</p>"
+
+                + "<h5> 11. ¿Tu héroe tiene algún prejuicio?</h5>"
+
+                + " <p>Sus ideas políticas son muy claras: Todo aquél que haya nacido rodeado de riquezas y facilidades, sería mucho mejor persona de haber nacido pobre y con dificultades. Nadie le podrá demostrar lo contrario, porque lo considera una verdad universal. Si alguien privilegiado, y bien abrigado, demuestra ser cruel, ignorante, o sencillamente realiza algún mal, lo primero que pensará es -Su modo de vida le ha corrompido-, o -Ojalá pierdas todo lo que tienes y te veas obligado a sufrir lo que haces... Ya verás qué bien te sentaba-. Eso le convierte en un clasista? Quizás... Pero él se llamará -Realista-. También sabe que todo aquél que haya vivido la mayor parte de su vida en el mar, llámesele marino, mercante o pirata, será un incurable excéntrico, y probablemente inadaptado a las sutilezas de la vida en tierra firme, tales como el respeto a los horarios, y a la comida decente.</p>"
+
+                + " <h5>12. ¿Dónde residen las lealtades de tu héroe?</h5>"
+
+                + "<p>Si existiese una bandera con la que jurar en nombre de las enseñanzas de su mentor, y la honestidad del Ratas, lo haría. Ninguna otra bandera le representaría mejor, y por tanto no se encontrará jurando en ninguna otra situación, salvo para asuntos puntuales, por el bien de algún objetivo mayor.</p>"
+
+                + "<h5> 13. ¿Tu héroe está enamorado? ¿Está casado o comprometido?</h5>"
+
+                + "<p>Nunca ha sentido el amor por ninguna persona, más allá que fraternidad hacia Linda Sijëel, su fiel compañera y apoyo entre los Losejai; cariño y lealtad hacia su difunto mentor y salvador, el Žynys Žmogus; y el difuso recuerdo de haber querido a sus padres, que murieron cuando él era muy joven.</p>"
+
+                + " <h5>14. ¿Qué pasa con la familia de tu héroe?</h5>"
+
+                + "<p>La familia Seijic era humilde y servicial, herederos por parte de su madre (quien le dio el apellido) del honor de servir a la familia Bogucky, Książęi desde tiempos inmemoriales del puerto comercial de Memel. La madre de Stjepan, Èglé Seijic, creció junto con el heredero Bogucky, Aleksändr, y cuando éste creció y heredó las tierras, pretendió casarse con ella. Sin embargo, el Książę tenía un temperamento atroz, con grandes estallidos de rabia si no se conseguía lo que quería, lo que llevó a su sirvienta a rehuir sus atenciones todo lo posible. Tanto fue así que, en secreto, quedó embarazada de un marinero mercante lunar, Jakhur Al-Shelim, y empezaron a desarrollar una vida lejos de las haciendas de Aleksänder. No fue hasta más tarde, cuando el joven Stjepan tenía 10 años, que el Książę descubrió la verdad, degollando en el acto personalmente a Èglé, y enviando a sus sicarios a arrasar la casa de ambos, asesinando a Jakhur en el proceso. Su temible rabia, sin embargo, no llegó al extremo de herir al niño, al que dejó marchar, huérfano en las calles."
+
+                + "</p>"
+
+                + "<h5>15. ¿Cómo lo describirían sus padres?</h5>"
+
+                + "<p>No existen a día de hoy voz ni por parte de madre ni de padre que pudiese describirle. Sin embargo, en caso de que le hubiesen estado vigilando desde el Más Allá, esto sería lo que dirían:</p>"
+
+                + "<p>Madre: Veo un hermoso hombre, de tez bronceada, pelo oscuro y escaso vello, como su padre. Aún pasarán años hasta que pueda llorar todas las lágrimas que me produjo verle solo en las calles, obligado a delinquir, y a sufrir incontables vejaciones y males para sobrevivir. Y ahora vive esclavizado a un ser que no le desea más que la destrucción de su alma... Pero ha salido adelante, y prospera. Solo espero que consiga ser feliz, y cerrar sus viejas heridas, algún día... Y que pueda perdonarme el no haber participado en su vida. Theus, ten piedad de su alma.</p>"
+
+                + " <p>Padre: El vivo reflejo de su madre. Tiene el mismo color y brillo en los ojos, sus mismos labios, y la misma forma de colocarlos para expresar lo que siente, aunque él mismo no se dé cuenta. Ha avanzado con la decisión que solo da la desesperación de no tener nada que perder, y ojalá no hubiese tenido que haberlo hecho, pero eso le ha hecho aprender muy rápido, y volverse fuerte de espíritu. Lo que más lamento es que Legión haya sido capaz, tan fácilmente, de oscurecer su alma, y apartarle de nosotros para el resto de la eternidad. Te echaré de menos, hijo mío... Pero aún puedo desearte que no caigas en la oscuridad.</p>"
+
+                + "<h5> 16. ¿Tu héroe es un gentil?</h5>"
+
+                + " <p>Stjepan ha visto a varios -gentiles-. Hombres y mujeres principalmente ricos y mayormente despreocupados que se dedican a actuar según un código que no sobreviviría ni dos asaltos fuera de una vida cómoda y apacible. Sabe que el mundo no funciona con gentilezas, y por tanto no va a hacer el ridículo por la moda del -sarmatismo- si hay supervivencia por la que preocuparse.</p>"
+
+                + "<h5> 17. ¿Tu héroe es muy religioso? ¿Qué secta de la Iglesia sigue?</h5>"
+
+                + "<p>Stjepan ha tenido la posibilidad de contactar con múltiples religiones, a lo largo de su infancia y adolescencia. De Ussura venían los Ortodoxos, que cantaban las maravillas del Primer Profeta, y cómo su mensaje era el único que decía todas las verdades. Por parte de su padre descubrió la religión Anashid, así como la Iglesia del Segundo Profeta, que la consideró anatema. Su madre, y como religión mayoritaria en Sarmacia, le enseñaron la fé Vaticana. Los viajeros eisenos, si bien pocos, hablaban de una Reforma Objecionista... Y por encima de todas ellas, en cuanto a influencia en su realidad y vida diaria, están los Dievai, de quienes aprendió gracias a su mentor, Žmogus, y de primera mano de uno de ellos, Lombrai. El mero hecho de que haya tantas intepretaciones de la fé, piensa Stjepan, es la prueba de que a los dioses no les importan los seres humanos, sino lo que hagan o crean, y se niega a hinchar el ego de seres que maniqueízan a la gente; sin embargo, sabe seguir los rezos en casi cualquier iglesia de Théah (más o menos) y platicar en largas conversaciones teológicas.</p>"
+
+                + "<h5> 18. ¿Tu héroe es miembro de un gremio, un club de caballeros o una sociedad secreta?</h5>"
+
+                + "<p>Como obliga a todos los Losejai, desde el momento en que su relación con su Dievas fue notable, el Ratas le abdujo, le forzó membresía, y le hizo atravesar por un duro entrenamiento. No se arrepiente, sin embargo, ya que considera que su labor es necesaria y que, a grandes rasgos, está bien enfocada y ejecutada. Sigue el credo del Ratas, y bajo su mecenazgo, se unió al Močiutės Skara, o -Manto de la Abuela- en curonio. En el Manto aprendió sus métodos de espionaje, compasión, apoyo, sabotaje, chantaje y diálogo para evitar catástrofes humanitarias, sean genocidios, guerras, abusos, o cualquier otra cosa. En más de una ocasión se le ha enviado como espía e informante a otras naciones y pueblos para afianzar la posición tanto de la Mancomunidad en Théah, como de la propia paz.</p>"
+
+                + "<h5>¿Qué piensa tu héroe de la hechicería?</h5>"
+
+                + "<p>Stjepan comprende que existen gran cantidad de poderes más allá de su comprensión y alcance, así como del de todos los humanos, e incluso de otros seres. No se queja, sin embargo. Al igual que los sacerdotes, arqueólogos y filósofos naturales recorren el mundo, extendiendo su conocimiento, y haciendo suyos los misterios, igual debería hacerse con los hechiceros. Si la humanidad tiene la capacidad de ponerse al nivel de otros seres, más antiguos o privilegiados, por qué no hacerlo? Rechazar algo solo por ser ajeno solo te aleja del progreso, no te acerca a él. Es por ello que, incluso tras lo que ha visto, sigue junto a Lombrai, y los poderes que le proporciona. </p>"
+
+                + "<h5> 20. Si pudieras, ¿Qué consejo le darías a tu héroe?</h5>"
+
+                + "<p>Stjepan, por favor... Deténte un momento, y piensa bien tu objetivo. No tienes nada que redimir. Cometiste un error, guiado por una mala influencia, cuando eras joven y estabas solo, asustado y hambriento. Ahora no eres así. Ahora sabes más del mundo, conoces a las personas, tienes poder. El mejor modo de evitar que se repita la historia, y que te impedirá caer, es aceptarte a tí mismo por lo que eres, no el instrumento de una redención, o una historia trágica desarrollándose, sino una persona, que merece poder asentarse en paz, y vivir según sus condiciones. No lo hagas por los difuntos, ni por tus errores... Sigue con esto, y hazlo por tí.</p>"
+                + "<a href='#' class='btn btn-white bg-dark text-white' onclick='tarjetaStjepan()'>Volver</a></div>";
+
+            document.getElementById("cont").innerHTML = texto;
+
+
+
+        }
+
+
+        function tarjetaNekane() {
+            cardNekane = "";
+
+            cardNekane += "<div class='card text-center' style='width: 18rem;'>"
+                + " <img src='https://i.pinimg.com/originals/1a/82/83/1a82837851cf49ab9a0d961848f9e6ed.jpg'"
+                + " class='card-img-top' alt=''...'>"
+                + " <div class='card-body'>"
+                + " <h5 class='card-title'>Nekane Amaia</h5>"
+                + " <p class='card-text'>El incendio de los bosques</p>"
+                + " <a href='#'' class='btn btn-white bg-dark text-white' onclick='preguntasNekane()'>Preguntas de rol</a>"
+                + " <button type='button' class='btn btn-white bg-dark text-white' data-toggle='modal' data-target='#modalNekane'>"
+                + "Historia"
+                + "</button>"
+                + "</div>"
+                + "</div>";
+            document.getElementById("cont").innerHTML = cardNekane;
+
+        }
+        function tarjetaStjepan() {
+            cardStjepan = "";
+            cardStjepan += "<div class='card text-center' style='width: 18rem;'>"
+                + " <img src='https://braceofpistols.files.wordpress.com/2017/09/sanderis-1.png' class='card-img-top' alt=''...'>"
+                + " <div class='card-body'>"
+                + " <h5 class='card-title'>Stjepan Sejic</h5>"
+                + " <p class='card-text'>El huerfano/Nebezhial</p>"
+                + " <a href='#'' class='btn btn-white bg-dark text-white' onclick='preguntasStjepan()'>Preguntas de rol</a>"
+                + " <button type='button' class='btn btn-white bg-dark text-white' data-toggle='modal' data-target='#modalStjepan'>"
+                + "Historia"
+                + "</button>"
+                + " </div>"
+                + "</div>";
+            tarjetaNekane()
+
+            document.getElementById("cont").innerHTML += cardStjepan;
+        }
+        function myMapa() {
+
+            myImagen = "";
+
+            myImagen += "<div class='mapaImagen'>"
+                + "<img src='https://2.bp.blogspot.com/-R_n9OZOXPYw/WmeEzUrROTI/AAAAAAAAEUM/WLqIpoMWHyAbbk6UdBYI_pDNHz1yoSOoQCLcBGAs/s1600/7thsea_map_of_theah_color_hires.jpg' alt='mapa'>"
+                + "</div>";
+
+            document.getElementById("cont").innerHTML = myImagen;
+
+        }
+
+
+    </script>
+    <style>
+        html,
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        nav {
+
+            padding: 1%;
+            background-color: lightgray;
+
+        }
+
+        nav ul {
+
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: rgb(22, 105, 97);
+            padding: 0 25px;
+
+        }
+
+        nav a:hover {
+            text-decoration: none;
+            color: white;
+            background-color: black;
+
+        }
+
+        header{
+            background-color: black;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+
+        .texto {
+
+            color: white;
+        }
+
+        section article img {
+
+            width: 400px;
+            height: auto;
+
+        }
+
+        section .container{
+            margin: 5%;
+        }
+
+        section {
+            background-image: url("https://images.wallpapersden.com/image/download/project-warlock-game_70382_1920x1080.jpg");
+            background-size: cover;
+            padding: 5%;
+
+        }
+    </style>
+
+</body>
+
+</html>
